@@ -1,13 +1,15 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({ darkMode }) => {
   return (
-    <div className="card container-fluid">
+    <div
+      className={`card container-fluid ${darkMode ? "bg-dark text-light" : ""}`}
+    >
       <div className="card-body d-flex justify-content-end">
-        <div className="">
-          <span className="text">Contactenos</span>
-          <span className="text ms-2 text-muted">AHorarioApp</span>
-        </div>
+        <span className="text">Contactenos</span>
+        <span className={`text ms-2 ${darkMode ? "" : "text-muted"}`}>
+          AHorarioApp
+        </span>
       </div>
     </div>
   );
